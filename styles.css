@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7ba27a;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-image: url('images/header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #151515;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+/* Navigation */
+.tabs {
+    background-color: #103f14;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabs ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.tabs ul li a {
+    color: #fdfdfd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tabs ul li a.active,
+.tabs ul li a:hover {
+    background-color: #439552;
+}
+
+/* Content */
+.container {
+    width: 70%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #6a0492;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #8e44ad;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#publications-list {
+    list-style-type: none;
+    padding: 0;
+}
+#publications-list li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+#publications-list a {
+    color: #003e80;
+    text-decoration: none;
+}
+#publications-list a:hover {
+    text-decoration: underline;
+}

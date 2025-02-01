@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Other meta tags -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_TRACKING_ID');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Background Image -->
+    <header>
+        <h1>Dr. Keerthan R Rao</h1>
+        <p>Computational Chemist . Postdoctoral Researcher . AI-Augmented Sorting </p>
+        <p>Idaho National Laboratory</p>
+    </header>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- Tab Content -->
+    <div class="container">
+        <!-- Home Tab Content -->
+        <div id="home" class="tab-content active">
+            <h2>Feel free to reach out to me while we are working on this!</h2>
+            <p>Stay tune! More info coming up here...</p>
+        </div>
+
+    <!-- Publications Tab Content -->
+    <div id="publications" class="tab-content">
+        <h2>Publications</h2>
+        <ul id="publications-list">
+            <!-- Publications will be dynamically added here -->
+        </ul>
+    </div>
+
+        <!-- Contact Tab Content -->
+        <div id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <p>Please fill out the form below to send me a message.</p>
+            <!-- Embed Google Form -->
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScplR3umSn3s05aKc-NvnQFTfvPk7LEG8HhFJp6kZvNgV0FPg/viewform?usp=sharing"
+                width="100%"
+                height="800"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
+                Loading…
+            </iframe>
+        </div>
+
+        <!-- Testimonials Tab Content (Commented Out) -->
+        <!--
+        <div id="testimonials" class="tab-content">
+            <h2>Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"This website is amazing! The design is clean, and the functionality is top-notch. Highly recommended!"</p>
+                    <p class="author">- John Doe, CEO of Example Corp</p>
+                </div>
+                <div class="testimonial">
+                    <p>"I love how professional and easy to navigate this website is. Great work!"</p>
+                    <p class="author">- Jane Smith, Marketing Director</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The attention to detail is incredible. It’s clear that a lot of thought went into this project."</p>
+                    <p class="author">- Alex Johnson, Freelance Designer</p>
+                </div>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <!-- JavaScript for Tabs -->
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tabs a');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Remove active class from all tabs and content
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to the clicked tab and corresponding content
+                tab.classList.add('active');
+                document.querySelector(tab.getAttribute('href')).classList.add('active');
+            });
+        });
+    </script>
+    
+    <script>
+        // Function to load publications from the text file
+        function loadPublications() {
+            fetch('publications.txt') // Path to the text file
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load publications');
+                    }
+                    return response.text(); // Read the file as text
+                })
+                .then(data => {
+                    console.log('File content:', data); // Debug: Log the file content
+                    const publicationsList = document.getElementById('publications-list');
+                    const publications = data.split('\n'); // Split the file content by new lines
+
+                    publications.forEach(pub => {
+                        if (pub.trim()) { // Check if the line is not empty
+                            console.log('Adding publication:', pub); // Debug: Log each publication
+                            const listItem = document.createElement('li');
+                            listItem.textContent = pub; // Add the publication text
+                            publicationsList.appendChild(listItem);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading publications:', error); // Debug: Log any errors
+                    const publicationsList = document.getElementById('publications-list');
+                    publicationsList.innerHTML = '<li>Unable to load publications. Please try again later.</li>';
+                });
+        }
+
+        // Load publications when the page loads
+        window.onload = loadPublications;
+    </script>
+</body>
+</html>
