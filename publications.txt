@@ -1,7 +1,7 @@
-So Min Park et al., Engineering ligand reactivity enables high-temperature operation of stable perovskite solar cells. Science 381, 209-215(2023). DOI:10.1126/science.adi4107
-Cayley R. Harding et al., Acid dyeing for green solvent processing of solvent resistant semiconducting organic thin films. Materials Horizons 7, 2959-2969(2020). https://doi.org/10.1039/D0MH00785D
-Koenig, Josh DB, et al., Lowering Electrocatalytic CO2 Reduction Overpotential Using N-Annulated Perylene Diimide Rhenium Bipyridine Dyads with Variable Tether Length. Journal of the American Chemical Society 143.40 (2021): 16849-16864.
-Islam, Taohedul, et al., Chalcocarbogels as High-Capacity and Cycle-Stable Electrode Materials for Lithium and Sodium Ion Batteries. ACS Energy Letters 9.1 (2023): 1-9.
-Rao, Keerthan R., et al., Carboxylic Acid Decarbonylation on Nickel: The Critical Role of the Acid Binding Geometry. ACS Catalysis 13.13 (2023): 9102-9112.
-Islam, Taohedul, et al., Mo3S13 Chalcogel: A High‐Capacity Electrode for Conversion‐Based Li‐Ion Batteries. ChemSusChem (2024): e202400084.
+So Min Park et al., Engineering ligand reactivity enables high-temperature operation of stable perovskite solar cells. Science 381, 209-215(2023). DOI:https://doi.org/10.1126/science.adi4107
+Cayley R. Harding et al., Acid dyeing for green solvent processing of solvent resistant semiconducting organic thin films. Materials Horizons 7, 2959-2969(2020). DOI:https://doi.org/10.1039/D0MH00785D
+Koenig, Josh DB, et al., Lowering Electrocatalytic CO2 Reduction Overpotential Using N-Annulated Perylene Diimide Rhenium Bipyridine Dyads with Variable Tether Length. Journal of the American Chemical Society 143.40 (2021): 16849-16864. DOI:https://doi.org/10.1021/jacs.1c09481
+Islam, Taohedul, et al., Chalcocarbogels as High-Capacity and Cycle-Stable Electrode Materials for Lithium and Sodium Ion Batteries. ACS Energy Letters 9.1 (2023): 1-9. DOI:https://doi.org/10.1021/acsenergylett.3c02112
+Rao, Keerthan R., et al., Carboxylic Acid Decarbonylation on Nickel: The Critical Role of the Acid Binding Geometry. ACS Catalysis 13.13 (2023): 9102-9112. DOI:https://doi.org/10.1021/acscatal.3c01489
+Islam, Taohedul, et al., Mo3S13 Chalcogel: A High‐Capacity Electrode for Conversion‐Based Li‐Ion Batteries. ChemSusChem (2024): e202400084. DOI:https://doi.org/10.1002/cssc.202400084
 Rao, Keerthan Raghavendra. First Principles Calculations to Investigate Surface and Catalytic Properties of Materials for Green Energy Generation. (2023).

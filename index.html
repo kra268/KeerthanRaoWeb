@@ -126,7 +126,9 @@
                         if (pub.trim()) { // Check if the line is not empty
                             console.log('Adding publication:', pub); // Debug: Log each publication
                             const listItem = document.createElement('li');
-                            listItem.textContent = pub; // Add the publication text
+                            // Detect DOIs or URLs and make them clickable
+                            const pubWithLinks = pub.replace(/(https?:\/\/[^\s]+|DOI:\s*[^\s]+)/g, '<a href="$&" target="_blank">$&</a>');
+                            listItem.innerHTML = pubWithLinks; // Add the publication text with links
                             publicationsList.appendChild(listItem);
                         }
                     });
