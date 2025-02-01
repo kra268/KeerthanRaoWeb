@@ -141,3 +141,23 @@ footer {
 #publications-list a:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+/* Icon Links */
+.icon-links {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    margin-top: 20px;
+}
+
+.icon-links a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.icon-links img.icon {
+    width: 40px; /* Set the size of the icons */
+    height: 40px;
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.icon-links img.icon:hover {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+}
