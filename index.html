@@ -121,14 +121,22 @@
                     console.log('File content:', data); // Debug: Log the file content
                     const publicationsList = document.getElementById('publications-list');
                     const publications = data.split('\n'); // Split the file content by new lines
-
+    
                     publications.forEach(pub => {
                         if (pub.trim()) { // Check if the line is not empty
                             console.log('Adding publication:', pub); // Debug: Log each publication
                             const listItem = document.createElement('li');
-                            // Detect DOIs or URLs and make them clickable
-                            const pubWithLinks = pub.replace(/(https?:\/\/[^\s]+|DOI:\s*[^\s]+)/g, '<a href="$&" target="_blank">$&</a>');
-                            listItem.innerHTML = pubWithLinks; // Add the publication text with links
+    
+                            // Extract the link and clean it up
+                            const linkMatch = pub.match(/https:\/\/[^\s]+/); // Find the first https link
+                            if (linkMatch) {
+                                const link = linkMatch[0]; // Get the link
+                                const cleanPub = pub.replace(/DOI:\s*https:\/\/[^\s]+/, `<a href="${link}" target="_blank">${link}</a>`); // Replace DOI:https with just the link
+                                listItem.innerHTML = cleanPub; // Add the publication text with the cleaned link
+                            } else {
+                                listItem.textContent = pub; // If no link is found, display the text as is
+                            }
+    
                             publicationsList.appendChild(listItem);
                         }
                     });
@@ -139,7 +147,7 @@
                     publicationsList.innerHTML = '<li>Unable to load publications. Please try again later.</li>';
                 });
         }
-
+    
         // Load publications when the page loads
         window.onload = loadPublications;
     </script>

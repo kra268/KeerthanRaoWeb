@@ -134,9 +134,10 @@ footer {
     font-size: 1.1em;
 }
 #publications-list a {
-    color: #003e80;
-    text-decoration: none;
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
 }
+
 #publications-list a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
 }
