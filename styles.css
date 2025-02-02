@@ -8,7 +8,6 @@ body {
 }
 
 /* Header Section */
-/* Header Section */
 header {
     background-image: url('images/header-background.jpg');
     background-size: cover;
@@ -31,6 +30,12 @@ header {
     border-radius: 50%; /* Make the image round */
     border: 3px solid #fff; /* Add a border around the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Add a glow effect */
 }
 
 header h1 {
@@ -41,33 +46,6 @@ header h1 {
 header p {
     font-size: 1.2em;
     margin: 10px 0 0;
-}
-.profile-pic {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Add a glow effect */
-}
-@media (max-width: 600px) {
-    .header-content {
-        flex-direction: column; /* Stack the profile picture and text vertically */
-        text-align: center;
-    }
-
-    .profile-pic {
-        width: 80px; /* Smaller profile picture for mobile */
-        height: 80px;
-    }
-
-    .header-text h1 {
-        font-size: 2em; /* Smaller font size for mobile */
-    }
-
-    .header-text p {
-        font-size: 1em; /* Smaller font size for mobile */
-    }
 }
 
 /* Navigation */
@@ -103,7 +81,7 @@ header p {
 
 /* Content */
 .container {
-    width: 70%;
+    width: 90%; /* Adjusted for smaller screens */
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -162,14 +140,17 @@ footer {
     margin-top: 20px;
 }
 
+/* Publications List */
 #publications-list {
     list-style-type: none;
     padding: 0;
 }
+
 #publications-list li {
     margin-bottom: 15px;
     font-size: 1.1em;
 }
+
 #publications-list a {
     color: #007BFF; /* Blue color for links */
     text-decoration: none; /* Remove underline */
@@ -178,11 +159,13 @@ footer {
 #publications-list a:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
 /* Icon Links */
 .icon-links {
     display: flex;
     gap: 20px; /* Space between icons */
     margin-top: 20px;
+    justify-content: center; /* Center icons */
 }
 
 .icon-links a {
@@ -228,19 +211,83 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Optional Hover Effect */
+.book-list a:hover img {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Header */
+    .header-content {
+        flex-direction: column; /* Stack the profile picture and text vertically */
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 80px; /* Smaller profile picture for mobile */
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    header p {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+
+    /* Navigation */
+    .tabs ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0;
+    }
+
+    .tabs ul li a {
+        display: block; /* Make links full width */
+        padding: 10px;
+    }
+
+    /* Container */
+    .container {
+        width: 95%; /* Full width on small screens */
+        padding: 15px;
+    }
+
+    /* Icon Links */
+    .icon-links {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center;
+    }
+
+    /* Resources Section */
     .book-list {
-        flex-direction: column;
+        flex-direction: column; /* Stack book images vertically */
         align-items: center;
     }
 
     .book-list img {
-        width: 150px;
+        width: 150px; /* Smaller images for mobile */
     }
 }
 
-/* Optional Hover Effect */
-.book-list a:hover img {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5em; /* Even smaller font size for very small screens */
+    }
+
+    header p {
+        font-size: 0.9em; /* Even smaller font size for very small screens */
+    }
+
+    /* Contact Form */
+    #contact-form input,
+    #contact-form textarea {
+        padding: 8px; /* Smaller padding for form inputs */
+    }
+
+    #contact-form button {
+        padding: 8px 16px; /* Smaller button for mobile */
+    }
 }
