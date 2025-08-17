@@ -55,7 +55,7 @@
             <h2>Feel free to reach out to me while we are working on this!</h2>
             <p>Schedule a <a href="https://buymeacoffee.com/ChemCoder/e/387694" target="_blank">1-on-1</a> with me! </p>
             <h3>Recent LinkedIn Post</h3>
-            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7359667309587673089?collapsed=1" height="264" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+            <div id="linkedin-posts-container"></div> <!-- Placeholder for LinkedIn posts -->
             <p>Follow me on <a href="https://www.linkedin.com/in/keerthan-kra268" target="_blank">LinkedIn</a> for more updates.</p>
                         <!-- Icon Links -->
             <div class="icon-links">
@@ -139,6 +139,16 @@
         </div>
         -->
     </div>
+
+    <script>
+        // Load LinkedIn posts from an external file
+        fetch('linkedin-posts.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('linkedin-posts-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading LinkedIn posts:', error));
+    </script>
 
     <!-- JavaScript for Tabs -->
     <script>
