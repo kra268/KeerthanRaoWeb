@@ -5,5 +5,5 @@ Islam, Taohedul, et al., Chalcocarbogels as High-Capacity and Cycle-Stable Elect
 Rao, Keerthan R., et al., Carboxylic Acid Decarbonylation on Nickel: The Critical Role of the Acid Binding Geometry. ACS Catalysis 13.13 (2023): 9102-9112. DOI: https://doi.org/10.1021/acscatal.3c01489
 Islam, Taohedul, et al., Mo3S13 Chalcogel: A High‐Capacity Electrode for Conversion‐Based Li‐Ion Batteries. ChemSusChem (2024): e202400084. DOI: https://doi.org/10.1002/cssc.202400084
 Rao, Keerthan Raghavendra. First Principles Calculations to Investigate Surface and Catalytic Properties of Materials for Green Energy Generation. (2023).
-Kothalawala, Nadeesha L. et al., Green synthesis of ultrathin WS2 nanosheets for efficient hydrogen evolution reaction. RSC Advances, 15 (24), 19305-19317 (2025). DOI: http://dx.doi.org/10.1039/D5RA00712G
+Kothalawala, Nadeesha L. et al., Green synthesis of ultrathin WS2 nanosheets for efficient hydrogen evolution reaction. RSC Advances, 15 (24), 19305-19317 (2025). DOI: http://doi.org/10.1039/D5RA00712G
 Harindi R Atapattu et al., A’-Site Dipole Magnitude and Direction Dominate the Ionization Energy and Electron Affinity of Layered Metal-Halide Perovskites, Journal of the American Chemical Society, 147 (30), 26898-26906 (2025). DOI: https://doi.org/10.1021/jacs.5c08621
